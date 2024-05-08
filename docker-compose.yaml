@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  sptaki:
+    build:
+      context: .
+      args:
+        # Go to https://dev.sp-tarkov.com/SPT-AKI/Server/commits/branch/master to find commit hashes
+        SPT: "" # commit hash ("79a5d32cb276e18a5b4405e1f7823cda4fe8e317")
+        SPT_BRANCH: "3.8.1"
+        NODE: "20.11.1"
+      no_cache: true
+      labels:
+        - "SPTAki"
+    image: sptaki:latest
+    volumes:
+      - ./server:/opt/server
+    ports:
+      - "6969:6969"
+      - "6970:6970"
+      - "6971:6971"
+      - "6972:6972"
+    user: "${UID}:${GID}" # Ensure that UID and GID environment variables are set on the host machine before running.
+    restart: unless-stopped
