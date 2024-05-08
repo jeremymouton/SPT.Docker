@@ -16,6 +16,7 @@ if [ -d "/opt/srv" ]; then
 	nohup timeout --preserve-status 25s ./Aki.Server.exe >/dev/null 2>&1 
 	sleep 10
 	sed -i 's/127.0.0.1/0.0.0.0/g' /opt/server/Aki_Data/Server/configs/http.json
+	sed -i 's/127.0.0.1/0.0.0.0/g' /opt/server/Aki_Data/Server/database/server.json
 	echo "Follow the instructions to proceed!"
 	exit 0
 fi
