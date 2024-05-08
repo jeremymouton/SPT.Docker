@@ -1,5 +1,5 @@
 ##
-## STP-AKI LINUX Container (originally by bullet)
+## SPT-AKI LINUX Container (originally by bullet)
 ##
 
 FROM ubuntu:latest AS builder
