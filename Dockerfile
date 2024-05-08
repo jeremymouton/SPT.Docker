@@ -18,7 +18,7 @@ RUN \. $HOME/.nvm/nvm.sh && nvm install $NODE
 RUN git clone --branch $SPT_BRANCH https://dev.sp-tarkov.com/SPT-AKI/Server.git srv || true
 
 ## Check out and git-lfs (specific commit --build-arg SPT=xxxx)
-WORKDIR /opt/srv/project 
+WORKDIR /opt/srv/project
 RUN git checkout $SPT || true
 RUN git-lfs fetch --all && git-lfs pull
 
