@@ -1,5 +1,5 @@
 ##
-## bullet's SIT LINUX Container
+## STP-AKI LINUX Container (originally by bullet)
 ##
 
 FROM ubuntu:latest AS builder

@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "StayInTarkov Docker by bullet"
+echo "SPT-AKI Server Docker (originally by bullet)"
 
 if [ -d "/opt/srv" ]; then
 	start=$(date +%s)
