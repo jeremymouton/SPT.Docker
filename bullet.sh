@@ -10,7 +10,7 @@ if [ -d "/opt/srv" ]; then
 	end=$(date +%s)
 	
 	echo "Files copied to your machine in $(($end-$start)) seconds."
-	echo "Starting the server to generate all the required files"
+	echo "Starting the server to generate all the required files."
 	cd /opt/server
 	chown $(id -u):$(id -g) ./* -Rf
 	nohup timeout --preserve-status 25s ./Aki.Server.exe >/dev/null 2>&1 
